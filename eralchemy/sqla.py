@@ -70,6 +70,9 @@ def database_to_intermediary(database_uri, schema):
 
     Base = automap_base()
     engine = create_engine(database_uri)
+    print('------------')
+    print(schema)
+    print('------------')
     if schema is not None:
         Base.metadata.schema = schema
 
