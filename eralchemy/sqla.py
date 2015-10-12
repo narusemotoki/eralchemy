@@ -79,4 +79,5 @@ def database_to_intermediary(database_uri, schema):
 
     # reflect the tables
     Base.prepare(engine, reflect=True)
+    print(Base.metadata.tables)
     return declarative_to_intermediary(Base)
