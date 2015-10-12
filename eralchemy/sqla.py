@@ -74,8 +74,7 @@ def database_to_intermediary(database_uri, schema):
     print('------------')
     print(schema)
     print('------------')
-    if schema is not None:
-        Base.metadata.schema = schema
+    Base.metadata.schema = schema
 
     # reflect the tables
     Base.prepare(engine, reflect=True)
