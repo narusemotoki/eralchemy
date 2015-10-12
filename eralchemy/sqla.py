@@ -60,6 +60,7 @@ def metadata_to_intermediary(metadata):
 
 def declarative_to_intermediary(base):
     """ Transform an SQLAlchemy Declarative Base to the intermediary representation. """
+    print(base.metadata.schema)
     return metadata_to_intermediary(base.metadata)
 
 
